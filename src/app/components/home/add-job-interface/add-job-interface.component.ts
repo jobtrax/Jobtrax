@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AddJobInterfaceService } from '../../../services/home/add-job-interface.service';
+import { JobsGraphInterfaceService } from '../../../services/home/jobs-graph-interface.service';
 
 @Component({
   selector: 'app-add-job-interface',
@@ -7,7 +8,8 @@ import { AddJobInterfaceService } from '../../../services/home/add-job-interface
   styleUrls: ['./add-job-interface.component.css']
 })
 export class AddJobInterfaceComponent implements OnInit {
-  constructor(public addJobInterfaceService: AddJobInterfaceService) { }
+  constructor(public addJobInterfaceService: AddJobInterfaceService,
+              public jobsGraphInterfaceService: JobsGraphInterfaceService) { }
   appliedToJobAlready = false;
   showModal = false;
   inspirationalQuote: string;
@@ -22,15 +24,13 @@ export class AddJobInterfaceComponent implements OnInit {
   // click handler function for form submit to alter
   handleSubmit() {
     // TODO: call to service addJobInterfaceService to add job to database
-    console.log(this.addJobInterfaceService.jobTitle,
-      this.addJobInterfaceService.jobDescription,
-      this.addJobInterfaceService.jobUrl,
-      this.addJobInterfaceService.dateApplied);
-
-    this.addJobInterfaceService.jobTitle = '';
-    this.addJobInterfaceService.jobDescription = '';
-    this.addJobInterfaceService.jobUrl = '';
-    this.addJobInterfaceService.dateApplied = 'mm/dd/yyyy';
+    // pushing additional jobs into sample data for front-end testing. graph also needs to be re-rendered upon submit.
+    let { jobTitle, jobDescription, jobUrl, dateApplied } = this.addJobInterfaceService;
+    if (jobTitle && jobDescription && jobUrl && dateApplied) {
+      this.jobsGraphInterfaceService.addJob({ jobTitle, jobDescription, jobUrl, dateApplied });
+    }
+    jobTitle = jobDescription = jobUrl = '';
+    dateApplied = 'mm/dd/yyyy';
     this.generateInspirationalQuote();
   }
 
