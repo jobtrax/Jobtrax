@@ -4,7 +4,7 @@ import { HomeComponent } from '../app/components/home/home.component';
 import { PreviousApplicationsComponent } from '../app/components/previous-applications/previous-applications.component';
 import { FutureApplicationsComponent } from '../app/components/future-applications/future-applications.component';
 
-const routes: Routes = [{path: 'home', component: HomeComponent},
+const routes: Routes = [{path: '', component: HomeComponent},
 {path: 'previousApps', component: PreviousApplicationsComponent},
 {path: 'futureApps', component: FutureApplicationsComponent}];
 
