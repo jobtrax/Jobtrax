@@ -19,7 +19,7 @@ export class JobsGraphInterfaceComponent implements OnInit {
     // on init, jobs are organized by date applied. eventually, this should be a function.
     this.organizeJobs();
   }
-
+  // might need to make organizeJobs a service, to reorganize jobs every time a job is added, but not sure yet.
   organizeJobs() {
     // form an object from jobs based on the date of application
     this.organizedJobListingsByDate = this.jobsGraphInterfaceService.sampleJobsAppliedTo.reduce((jobsByDate, job, i, a) => {
@@ -42,5 +42,4 @@ export class JobsGraphInterfaceComponent implements OnInit {
   // start with 100% of all job apps before adding funcitonality to change views
   // number of table rows (<tr>) === the maximum amount of job apps submitted in one given day
   // number of table data (<td>) === one for each unique date
-
 }
