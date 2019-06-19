@@ -1,0 +1,10 @@
+  <table id="jobs-timeline-graph">
+    <tbody>
+      <tr>
+        <td *ngFor="let date of this.applicationDates"><p>{{ this.organizedJobListingsByDate[date].length }} apps</p></td>
+      </tr>
+      <tr>
+        <td *ngFor="let date of this.applicationDates"> {{ date }} </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,38 @@
+<div class="add-job-modal">
+  <button *ngIf="!this.showModal && this.showAddJobButton" class="ui button" (click)="this.toggleShowModal()">
+    Add A Job You've Applied To!
+  </button>
+  <div *ngIf="showInspirationalQuote" class="inspirational-quote">
+    <h3> {{ this.inspirationalQuote }} </h3>
+  </div>
+</div>
+<div *ngIf="this.showModal">
+<form class="ui form">
+    <div class="field">
+      <label>Job Title</label>
+      <input type="text" name="job-title" placeholder="Job title" [(ngModel)]="this.addJobInterfaceService.jobTitle">
+    </div>
+    <div class="field">
+      <label>Job Description</label>
+      <input type="text" name="job-description" placeholder="Job description" [(ngModel)]="this.addJobInterfaceService.jobDescription">
+    </div>
+    <div class="field">
+        <label>Job Listing URL</label>
+        <input type="text" name="job-listing-url" placeholder="Job listing URL" [(ngModel)]="this.addJobInterfaceService.jobUrl">
+      </div>
+    <div class="field">
+      <div class="ui checkbox">
+        <input type="checkbox" tabindex="0" class="hidden" (click)="handleCheck()">
+        <label>I have applied to this job.</label>
+      </div>
+    </div>
+    <div *ngIf="this.appliedToJobAlready" class="field">
+        <label>Date applied:</label>
+        <input type="date" name="date-job-applied" placeholder="Job listing URL" [(ngModel)]="this.addJobInterfaceService.dateApplied">
+      </div>
+    <button class="ui button" type="button" (click)="handleSubmit()">Submit</button>
+  </form>
+  <button class="ui button" (click)="this.toggleShowModal()">
+    Close
+    </button>
+    </div>
