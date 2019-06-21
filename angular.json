@@ -82,7 +82,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["../node_modules/svg.js/dist/svg.min.js"],
             "assets": [
               "src/favicon.ico",
               "src/assets"
