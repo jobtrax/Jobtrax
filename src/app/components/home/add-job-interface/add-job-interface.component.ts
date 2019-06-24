@@ -32,6 +32,9 @@ export class AddJobInterfaceComponent implements OnInit {
     jobTitle = jobDescription = jobUrl = '';
     dateApplied = 'mm/dd/yyyy';
     this.generateInspirationalQuote();
+    // on submit, a service needs to be called to change state to represent changes in job table
+    // this means the state stored in the service needs to be directly in the html of the graph interface
+    this.jobsGraphInterfaceService.organizeJobs();
   }
 
   generateInspirationalQuote() {
