@@ -25,3 +25,6 @@ class Jobs_applied_toList(APIView):
 
     def post(self):
         pass
+
+def index(request):
+    return render(request, 'ang_files/index.html')
