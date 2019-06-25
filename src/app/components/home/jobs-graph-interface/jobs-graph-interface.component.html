@@ -1,10 +1,18 @@
-  <table id="jobs-timeline-graph">
-    <tbody>
-      <tr>
-        <td *ngFor="let date of this.jobsGraphInterfaceService.applicationDates"><p>{{ this.jobsGraphInterfaceService.organizedJobListingsByDate[date].length }} apps</p></td>
-      </tr>
-      <tr>
-        <td *ngFor="let date of this.jobsGraphInterfaceService.applicationDates"> {{ date }} </td>
-      </tr>
-    </tbody>
-  </table>
+
+<div class="container" id="graph">
+<div class="title">
+    <h1>Jobgraph</h1>
+</div>
+    <div class="row">
+      <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="top">
+        <p>{{ this.jobsGraphInterfaceService.organizedJobListingsByDate[date].length }} apps</p>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="bottom">
+      <p>{{ date }}</p>
+    </div>
+  </div>
+</div>
+
+

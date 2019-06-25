@@ -10,6 +10,7 @@ import { PreviousApplicationsComponent } from './components/previous-application
 import { FutureApplicationsComponent } from './components/future-applications/future-applications.component';
 import { AddJobInterfaceComponent } from './components/home/add-job-interface/add-job-interface.component';
 import { JobsGraphInterfaceComponent } from './components/home/jobs-graph-interface/jobs-graph-interface.component';
+import $ from 'jquery';
 
 @NgModule({
   declarations: [
