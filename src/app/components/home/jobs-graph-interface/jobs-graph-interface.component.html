@@ -1,8 +1,8 @@
-
+<div class="gameboy-screen">
 <div class="container" id="graph">
 <div class="title">
     <h1>Jobgraph</h1>
-</div>
+  </div>
     <div class="row">
       <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="top">
         <p>{{ this.jobsGraphInterfaceService.organizedJobListingsByDate[date].length }} apps</p>
@@ -13,6 +13,7 @@
       <p>{{ date }}</p>
     </div>
   </div>
+</div>
 </div>
 
 
