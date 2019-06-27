@@ -13,6 +13,7 @@ export class GraphEyesComponent implements OnInit {
     const reds: any = document.getElementsByClassName('red');
     const whites: any = document.getElementsByClassName('white');
     const blacks: any = document.getElementsByClassName('black');
+
     document.body.onmousemove = (e) => {
 	  const x = e.clientX - (document.body.clientWidth / 2);
 	  const y = e.clientY - (document.body.clientHeight / 2);
