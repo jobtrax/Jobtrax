@@ -12,4 +12,5 @@ export class GraphNavigationInterfaceComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }
