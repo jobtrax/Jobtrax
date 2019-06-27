@@ -10,9 +10,9 @@ export class GraphEyesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const reds = document.getElementsByClassName('red');
-    const whites = document.getElementsByClassName('white');
-    const blacks = document.getElementsByClassName('black');
+    const reds: any = document.getElementsByClassName('red');
+    const whites: any = document.getElementsByClassName('white');
+    const blacks: any = document.getElementsByClassName('black');
     document.body.onmousemove = (e) => {
 	  const x = e.clientX - (document.body.clientWidth / 2);
 	  const y = e.clientY - (document.body.clientHeight / 2);
@@ -20,11 +20,11 @@ export class GraphEyesComponent implements OnInit {
 	  for (let i = 0; i < reds.length; i++ ) {
 		reds[i].style.transform = 'translate(' + (x * 0.005) + 'px, ' + (y * 0.00625) + 'px)';
 	  }
-	  for (var i = 0; i < whites.length; i++) {
+	  for (let i = 0; i < whites.length; i++) {
 		whites[i].style.transform = 'translate(' + (x * 0.0025) + 'px, ' + (y * 0.0125) + 'px) rotate(45deg)';
     }
-    for (var i = 0; i < blacks.length; i++) {
-      blacks[i].style.transform = 'translate(' + (x*0.01) + 'px, ' + (y * 0.01875) + 'px)';
+    for (let i = 0; i < blacks.length; i++) {
+    blacks[i].style.transform = 'translate(' + (x * 0.015) + 'px, ' + (y * 0.028125) + 'px)';
     }
 };
   }

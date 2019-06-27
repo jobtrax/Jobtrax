@@ -1,12 +1,3 @@
-body {
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	min-height:100vh;
-	margin:0;
-	background-color:#003197;
-}
-
 div {
 	display:flex;
 	align-items:center;
@@ -17,7 +8,7 @@ div {
 .orange {
 	height:5vh;
 	width:5vh;
-	background-color:#CB542C;
+	background-color:rgb(56, 57, 99);
 	border-radius:100vh;
 	margin:0 .625vh;
 }
@@ -25,7 +16,7 @@ div {
 	.red {
 		height:3.75vh;
 		width:3.75vh;
-		background-color:#A82B44;
+		background-color:rgb(249, 148, 16);
 		border-radius:100vh;
   }
 
