@@ -1,3 +1,7 @@
 .add-job-modal {
-  margin-top: 50px;
+  color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #000000, 0 0 30px rgb(135, 135, 135), 0 0 40px rgb(199, 199, 199), 0 0 55px rgb(0, 59, 148), 0 0 75px #dadada;
 }

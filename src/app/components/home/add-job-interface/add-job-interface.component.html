@@ -1,11 +1,16 @@
 <div class="add-job-modal">
-  <button *ngIf="!this.showModal && this.showAddJobButton" class="ui button" (click)="this.toggleShowModal()">
-    Add A Job You've Applied To!
-  </button>
-  <div *ngIf="showInspirationalQuote" class="inspirational-quote">
-    <h3> {{ this.inspirationalQuote }} </h3>
+  <div class="row">
+    <div class="col">
+      <div *ngIf="!this.showModal && this.showAddJobButton" class="ui button" (click)="this.toggleShowModal()">
+        Add A Job You've Applied To!
+      </div>
+      <div *ngIf="showInspirationalQuote" class="inspirational-quote">
+        <h3> {{ this.inspirationalQuote }} </h3>
+      </div>
+    </div>
   </div>
 </div>
+
 <div *ngIf="this.showModal">
 <form class="ui form">
     <div class="field">

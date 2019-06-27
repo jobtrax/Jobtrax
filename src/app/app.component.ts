@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-declare const SVG: any;
 
 @Component({
   selector: 'app-root',
