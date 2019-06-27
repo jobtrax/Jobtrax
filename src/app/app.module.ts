@@ -11,6 +11,9 @@ import { FutureApplicationsComponent } from './components/future-applications/fu
 import { AddJobInterfaceComponent } from './components/home/add-job-interface/add-job-interface.component';
 import { JobsGraphInterfaceComponent } from './components/home/jobs-graph-interface/jobs-graph-interface.component';
 import $ from 'jquery';
+import { GraphNavigationInterfaceComponent } from './components/graph-navigation-interface/graph-navigation-interface.component';
+import * as d3 from 'd3';
+import { GraphEyesComponent } from './components/graph-eyes/graph-eyes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import $ from 'jquery';
     PreviousApplicationsComponent,
     FutureApplicationsComponent,
     AddJobInterfaceComponent,
-    JobsGraphInterfaceComponent
+    JobsGraphInterfaceComponent,
+    GraphNavigationInterfaceComponent,
+    GraphEyesComponent
   ],
   imports: [
     BrowserModule,

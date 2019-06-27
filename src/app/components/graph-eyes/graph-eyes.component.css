@@ -1,0 +1,48 @@
+body {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	margin:0;
+	background-color:#003197;
+}
+
+div {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	transition:transform 0.1s;
+}
+
+.orange {
+	height:5vh;
+	width:5vh;
+	background-color:#CB542C;
+	border-radius:100vh;
+	margin:0 .625vh;
+}
+
+	.red {
+		height:3.75vh;
+		width:3.75vh;
+		background-color:#A82B44;
+		border-radius:100vh;
+  }
+
+		.white {
+			height:2.1875vh;
+			width:2.1875vh;
+			background-color:#DEDEDE;
+			border-radius:100% 0;
+			transform:rotate(45deg);
+			position:absolute;
+    }
+
+		.black {
+			height:0.625vh;
+			width:0.625vh;
+			background-color:#000000;
+			border-radius:100vh;
+			position:absolute;
+			z-index:100;
+		}
