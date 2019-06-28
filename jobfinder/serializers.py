@@ -4,8 +4,7 @@ from .models import Job_candidate, Jobs_applied_to
 class Job_candidateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job_candidate
-        fields = ('name', 'email')
-
+        fields = ('id', 'name', 'email')
 
 class Jobs_applied_toSerializer(serializers.ModelSerializer):
     class Meta:
