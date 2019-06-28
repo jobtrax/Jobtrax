@@ -1,0 +1,97 @@
+
+.controls {
+  position: relative;
+}
+
+  .dpad {
+    width: 80px;
+    height: 80px;
+    background: lightgray;
+    border: 2px solid line;
+    border-radius: 100%;
+    position: relative;
+    left: 10px;
+    top: 20px;
+  }
+      .plus:before, .plus:after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: darkgray;
+          border-radius: 3px;
+          box-shadow: 0 0 0 3px line;
+          content: '';
+          display: block;
+          height: 18px;
+          width: 65px;
+        }
+        .plus:after {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        .middle:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: darkgray;
+          width: 30px;
+          height: 15px;
+        }
+        .middle:after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(99, 99, 99);
+            border-radius: 50%;
+            border: 2px solid line;
+            content: '';
+            height: 12px;
+            width: 12px;
+          }
+
+          .buttons {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            width: 90px;
+            height: 38px;
+            background-color: lightgray;
+            border: 2px solid line;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-between;
+            transform: rotate(-35deg);
+          }
+            .buttons:before, .buttons:after {
+              content: '';
+              display: block;
+              background-color: darkgray;
+              width: 24px;
+              height: 24px;
+              border: 2px solid line;
+              border-radius: 100%;
+              margin: 7px;
+            }
+
+
+  .startselect {
+    padding-top: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 40px);
+    display: flex;
+  }
+
+    .startselect:before, .startselect:after {
+      content: '';
+      display: block;
+      background-color: lightgray;
+      border: 2px solid line;
+      border-radius: 8px;
+      margin: 0 4px;
+      width: 50px;
+      height: 25px;
+    }
