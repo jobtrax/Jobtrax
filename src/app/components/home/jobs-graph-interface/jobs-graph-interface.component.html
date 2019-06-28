@@ -34,8 +34,8 @@
             <li></li>
           </ol>
         </div> -->
-
-<div class="container" id="graph">
+<div *ngIf="screenSwitchService.jobGraph === 'show'">
+  <div class="container" id="graph">
     <div class="title">
       <h1>Jobgraph</h1>
     </div>
@@ -50,5 +50,6 @@
       </div>
     </div>
   </div>
+</div>
 
 

@@ -12,13 +12,18 @@ export class GraphNavigationInterfaceComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickShowGraph() {
+    this.screenSwitchService.showJobGraph();
+  }
   onClickMotiv8() {
     // motivational quote shows on screen temporarily
+    this.screenSwitchService.showMotivationalQuote();
   }
   onClickAddJob() {
     // job add interface shows up on screen until submit
+    this.screenSwitchService.showAddJobInterface();
   }
   onClickGameScreen() {
-
+    this.screenSwitchService.showGame();
   }
 }
