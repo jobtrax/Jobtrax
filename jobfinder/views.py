@@ -1,35 +1,35 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Job_candidate, Jobs_applied_to
-from .serializers import Job_candidateSerializer, Jobs_applied_toSerializer
+from .models import Jobtrax_user, Applications
+from .serializers import Jobtrax_userSerializer, ApplicationsSerializer
 
 # Create your views here.
-class Job_candidateList(APIView):
+class Jobtrax_userList(APIView):
     def get(self, request, name, password):
-        job_candidate = Job_candidate.objects.get(name=name, password=password)
-        serializer = Job_candidateSerializer(job_candidate, many=False)
+        jobtrax_user = Jobtrax_user.objects.get(name=name, password=password)
+        serializer = Jobtrax_userSerializer(jobtrax_user, many=False)
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = Job_candidateSerializer(data=request.data)
+        serializer = Jobtrax_userSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class Jobs_applied_toList(APIView):
+class ApplicationsList(APIView):
     def get(self, request, user_id):
-        jobs_applied_to = Jobs_applied_to.objects.filter(job_candidate=user_id)
-        # jobs_applied_to = Jobs_applied_to.objects.all()
-        serializer = Jobs_applied_toSerializer(jobs_applied_to, many=True)
+        applications = Applications.objects.filter(jobtrax_user=user_id)
+        # Applications = Applications.objects.all()
+        serializer = ApplicationsSerializer(applications, many=True)
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = Jobs_applied_toSerializer(data=request.data)
+        serializer = ApplicationsSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

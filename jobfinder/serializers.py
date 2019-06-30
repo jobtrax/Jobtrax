@@ -1,13 +1,13 @@
 from rest_framework import serializers
-from .models import Job_candidate, Jobs_applied_to
+from .models import Jobtrax_user, Applications
 
-class Job_candidateSerializer(serializers.ModelSerializer):
+class Jobtrax_userSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Job_candidate
+        model = Jobtrax_user
         fields = ('id', 'name', 'email')
 
-class Jobs_applied_toSerializer(serializers.ModelSerializer):
+class ApplicationsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Jobs_applied_to
+        model = Applications
         fields = '__all__'
 

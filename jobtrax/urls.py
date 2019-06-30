@@ -20,8 +20,8 @@ from jobfinder import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/<str:name>/<str:password>', views.Job_candidateList.as_view()),
-    path('jobfinder/<str:user_id>', views.Jobs_applied_toList.as_view()),
+    path('login/<str:name>/<str:password>', views.Jobtrax_userList.as_view()),
+    path('jobfinder/<str:user_id>', views.ApplicationsList.as_view()),
     path('', include('jobfinder.urls')),
 ]
 
