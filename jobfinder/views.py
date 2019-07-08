@@ -6,7 +6,7 @@ from rest_framework import status
 from .models import Jobtrax_user, Applications
 from .serializers import Jobtrax_userSerializer, ApplicationsSerializer
 
-# Create your views here.
+
 class Jobtrax_userList(APIView):
     def get(self, request, name, password):
         jobtrax_user = Jobtrax_user.objects.get(name=name, password=password)
@@ -24,7 +24,6 @@ class Jobtrax_userList(APIView):
 class ApplicationsList(APIView):
     def get(self, request, user_id):
         applications = Applications.objects.filter(jobtrax_user=user_id)
-        # Applications = Applications.objects.all()
         serializer = ApplicationsSerializer(applications, many=True)
         return Response(serializer.data)
 
