@@ -1,7 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Job_candidate, Jobs_applied_to
+from .models import *
 
-admin.site.register(Job_candidate)
-admin.site.register(Jobs_applied_to)
+admin.site.register(Jobtrax_user)
+admin.site.register(Applications)
+admin.site.register(Companies)
+admin.site.register(Company_contacts)
+admin.site.register(Job_emails)

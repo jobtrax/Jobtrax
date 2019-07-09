@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# removes .pyc files to avoid unneeded merge conflicts
+*.pyc
