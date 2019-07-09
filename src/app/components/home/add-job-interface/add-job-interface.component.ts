@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AddJobInterfaceService } from '../../../services/home/add-job-interface.service';
 import { JobsGraphInterfaceService } from '../../../services/home/jobs-graph-interface.service';
-
+import { ScreenSwitchService } from '../../../services/screen-switch.service';
 @Component({
   selector: 'app-add-job-interface',
   templateUrl: './add-job-interface.component.html',
@@ -9,7 +9,8 @@ import { JobsGraphInterfaceService } from '../../../services/home/jobs-graph-int
 })
 export class AddJobInterfaceComponent implements OnInit {
   constructor(public addJobInterfaceService: AddJobInterfaceService,
-              public jobsGraphInterfaceService: JobsGraphInterfaceService) { }
+              public jobsGraphInterfaceService: JobsGraphInterfaceService,
+              public screenSwitchService: ScreenSwitchService) { }
   appliedToJobAlready = false;
   showModal = false;
   inspirationalQuote: string;
@@ -46,6 +47,7 @@ export class AddJobInterfaceComponent implements OnInit {
       this.showInspirationalQuote = false;
       this.showAddJobButton = true;
       this.appliedToJobAlready = false;
+      this.screenSwitchService.showJobGraph();
     }, 1750);
   }
 
@@ -57,6 +59,4 @@ export class AddJobInterfaceComponent implements OnInit {
   toggleShowModal() {
     this.showModal = !this.showModal;
   }
-
-
 }

@@ -10,6 +10,7 @@ export class GraphNavigationInterfaceComponent implements OnInit {
   constructor(public screenSwitchService: ScreenSwitchService) { }
 
   ngOnInit() {
+    this.onClickShowGraph();
   }
 
   onClickShowGraph() {

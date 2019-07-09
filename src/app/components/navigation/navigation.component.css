@@ -1,3 +1,53 @@
 nav {
-background-color: rgb(255, 157, 38);
+  background-color: rgb(255, 157, 38);
+}
+
+#navbartoggler {
+  background-color: lightgray;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(144, 144, 144);
+  height: 40px;
+}
+
+#navbutton1 {
+  text-align: center;
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(144, 144, 144);
+  border-radius: 8px;
+  width: 170px;
+  height: 35px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+#navbutton2 {
+  text-align: center;
+  content: '';
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(144, 144, 144);
+  border-radius: 8px;
+  width: 170px;
+  height: 35px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+#navbutton3 {
+  text-align: center;
+  content: '';
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(144, 144, 144);
+  border-radius: 8px;
+  width: 170px;
+  height: 35px;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }

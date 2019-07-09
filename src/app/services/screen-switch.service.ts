@@ -31,4 +31,5 @@ showGameScreen;
     this.showGameScreen = 'show';
     this.jobGraph = this.addJobInterface = this.motivationalQuote = 'hide';
   }
+
 }
