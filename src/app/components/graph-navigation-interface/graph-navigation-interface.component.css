@@ -77,21 +77,74 @@
             }
 
 
-  .startselect {
-    padding-top: 15%;
+  .addJobButton {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 40px);
-    display: flex;
+    left: 32%;
+    transform: translate(-20%, 80px);
+    content: '';
+    background-color: lightgray;
+    border: 2px solid line;
+    border-radius: 8px;
+    margin: 0 4px;
+    width: 60px;
+    height: 25px;
+  }
+  .addJobButton:hover {
+
+    background-color: rgb(165, 165, 165);
+
   }
 
-    .startselect:before, .startselect:after {
-      content: '';
-      display: block;
-      background-color: lightgray;
-      border: 2px solid line;
-      border-radius: 8px;
-      margin: 0 4px;
-      width: 50px;
-      height: 25px;
-    }
+  .motiv8Button {
+    position: absolute;
+    left: 56%;
+    transform: translate(-20%, 80px);
+    content: '';
+    background-color: lightgray;
+    border: 2px solid line;
+    border-radius: 8px;
+    margin: 0 4px;
+    width: 60px;
+    height: 25px;
+  }
+  .motiv8Button:hover {
+
+    background-color: rgb(165, 165, 165);
+
+  }
+
+  .showGraphButton {
+    left: 32%;
+    position: absolute;
+    transform: translate(-20%, 120px);
+    content: '';
+    background-color: lightgray;
+    border: 2px solid line;
+    border-radius: 8px;
+    margin: 0 4px;
+    width: 60px;
+    height: 25px;
+  }
+   .showGraphButton:hover {
+
+    background-color: rgb(165, 165, 165);
+
+  }
+
+  .showGameButton {
+    left: 56%;
+    position: absolute;
+    transform: translate(-20%, 120px);
+    content: '';
+    background-color: lightgray;
+    border: 2px solid line;
+    border-radius: 8px;
+    margin: 0 4px;
+    width: 60px;
+    height: 25px;
+  }
+   .showGameButton:hover {
+
+    background-color: rgb(165, 165, 165);
+
+  }

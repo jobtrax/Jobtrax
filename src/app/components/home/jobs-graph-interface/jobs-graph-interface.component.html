@@ -12,26 +12,51 @@
             <app-graph-eyes>
                 </app-graph-eyes>
           </div>
-    </div>
-    </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="gameboy-screen">
-<div class="container" id="graph">
-  <div class="title">
-    <h1>Jobgraph</h1>
-  </div>
+      <!-- <div class="mouth" id="mouth">
+          <div class="tongue"></div>
+          <ol class="teeth">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div> -->
+<div *ngIf="screenSwitchService.jobGraph === 'show'">
+  <div class="container" id="graph">
+    <div class="title">
+      <h1>Jobgraph</h1>
+    </div>
+      <div class="row">
+        <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="top">
+          <p>{{ this.jobsGraphInterfaceService.organizedJobListingsByDate[date].length }} apps</p>
+      </div>
+    </div>
     <div class="row">
-      <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="top">
-        <p>{{ this.jobsGraphInterfaceService.organizedJobListingsByDate[date].length }} apps</p>
-    </div>
-  </div>
-  <div class="row">
-    <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="bottom">
-      <p> {{ date }}</p>
+      <div *ngFor="let date of this.jobsGraphInterfaceService.applicationDates" class="col" id="bottom">
+        <p> {{ date }}</p>
+      </div>
     </div>
   </div>
 </div>
-</div>
+    <div *ngIf="screenSwitchService.addJobInterface === 'show'">
+      <app-add-job-interface></app-add-job-interface>
+    </div>
+
+    <div *ngIf="screenSwitchService.showGameScreen === 'show'">
+   </div>
+
 
 

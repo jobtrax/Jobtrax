@@ -12,4 +12,6 @@ export class FutureApplicationsComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
 }
