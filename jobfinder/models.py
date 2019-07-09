@@ -12,7 +12,7 @@ class Jobtrax_user(models.Model):
 class Companies(models.Model):
     name = models.CharField(max_length=30)
     is_hiring = models.BooleanField(default=True)
-    admin_id = models.OneToOneField(
+    admin = models.OneToOneField(
         Jobtrax_user,
         on_delete=models.CASCADE,
         primary_key=True
@@ -27,7 +27,7 @@ class Company_contacts(models.Model):
 
 
 class Applications(models.Model):
-    jobtrax_user_id = models.ForeignKey(
+    jobtrax_user = models.ForeignKey(
         Jobtrax_user,
         on_delete=models.CASCADE
     )
@@ -41,7 +41,7 @@ class Applications(models.Model):
         auto_now_add=True,
         null=True
     )
-    last_email_id = models.ForeignKey(
+    last_email = models.ForeignKey(
         'Job_emails',
         on_delete=models.SET_NULL,
         null=True
@@ -53,7 +53,7 @@ class Applications(models.Model):
     )
     expected_salary = models.FloatField(null=True)
     notes = models.TextField(null=True)
-    preferred_contact_id = models.ForeignKey(
+    preferred_contact = models.ForeignKey(
         Company_contacts,
         on_delete=models.SET_NULL,
         null=True
@@ -66,12 +66,12 @@ class Job_emails(models.Model):
         null=True
     )
     context = models.TextField()
-    application_id = models.ForeignKey(
+    application = models.ForeignKey(
         Applications,
         on_delete=models.SET_NULL,
         null=True
     )
-    Company_contact_id = models.ForeignKey(
+    Company_contact = models.ForeignKey(
         Company_contacts,
         on_delete=models.SET_NULL,
         null=True
