@@ -48,5 +48,5 @@ Thumbs.db
 # removes .pyc files to avoid unneeded merge conflicts
 *.pyc
 
-# env variables
+# removes .env
 .env
