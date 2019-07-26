@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class JobsGraphInterfaceService {
-  sampleJobsAppliedTo: object[] = [
+  sampleJobsAppliedTo: any = [
     { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
     'www.weFixBoats.com', dateApplied: '2019-06-11' },
     { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
