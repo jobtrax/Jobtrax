@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AddJobInterfaceService } from '../../../services/home/add-job-interface.service';
 import { JobsGraphInterfaceService } from '../../../services/home/jobs-graph-interface.service';
 import { ScreenSwitchService } from '../../../services/screen-switch.service';
+import { GetJobsService } from '../../../services/get-jobs.service';
 @Component({
   selector: 'app-add-job-interface',
   templateUrl: './add-job-interface.component.html',
@@ -10,7 +11,8 @@ import { ScreenSwitchService } from '../../../services/screen-switch.service';
 export class AddJobInterfaceComponent implements OnInit {
   constructor(public addJobInterfaceService: AddJobInterfaceService,
               public jobsGraphInterfaceService: JobsGraphInterfaceService,
-              public screenSwitchService: ScreenSwitchService) { }
+              public screenSwitchService: ScreenSwitchService,
+              public getJobsService: GetJobsService) { }
   appliedToJobAlready = false;
   showModal = false;
   inspirationalQuote: string;
@@ -35,6 +37,7 @@ export class AddJobInterfaceComponent implements OnInit {
     this.generateInspirationalQuote();
     // on submit, a service needs to be called to change state to represent changes in job table
     // this means the state stored in the service needs to be directly in the html of the graph interface
+    this.getJobsService.addJobs();
     this.jobsGraphInterfaceService.organizeJobs();
   }
 

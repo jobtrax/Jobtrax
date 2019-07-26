@@ -15,7 +15,7 @@ class Companies(models.Model):
     admin = models.OneToOneField(
         Jobtrax_user,
         on_delete=models.CASCADE,
-        primary_key=True
+        null=True
     )
 
 
@@ -29,13 +29,14 @@ class Company_contacts(models.Model):
 class Applications(models.Model):
     jobtrax_user = models.ForeignKey(
         Jobtrax_user,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        null=True
     )
     job_title = models.CharField(max_length=30)
     company = models.OneToOneField(
         Companies,
         on_delete=models.CASCADE,
-        primary_key=True
+        null=True
     )
     date_applied = models.DateField(
         auto_now_add=True,
