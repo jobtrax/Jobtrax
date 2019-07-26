@@ -5,28 +5,28 @@ import { Injectable } from '@angular/core';
 })
 export class JobsGraphInterfaceService {
   sampleJobsAppliedTo: any = [
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-11' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-11' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-12' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-12' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-13' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-13' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-14' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-14' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-14' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-14' },
-    { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
-    'www.weFixBoats.com', dateApplied: '2019-06-14' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-11' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-11' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-12' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-12' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-13' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-13' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-14' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-14' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-14' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-14' },
+    // { jobTitle: 'boat engineer', jobDescription: 'fixing boats for money', jobUrl:
+    // 'www.weFixBoats.com', dateApplied: '2019-06-14' },
   ];
   organizedJobListingsByDate: any;
   // max amount of jobs applied on any given date is basis for chart's max height.
