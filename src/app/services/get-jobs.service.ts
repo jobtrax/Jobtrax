@@ -8,7 +8,7 @@ import { JobsGraphInterfaceService } from './home/jobs-graph-interface.service';
   providedIn: 'root'
 })
 export class GetJobsService {
-
+  temp: any;
   constructor(
     public http: HttpClient,
     public addJobInterfaceService: AddJobInterfaceService,
@@ -17,17 +17,32 @@ export class GetJobsService {
 
   addJobs() {
     const { jobDescription, jobTitle, jobUrl, dateApplied } = this.addJobInterfaceService;
-    this.http.post('http://localhost:8000/jobfinder/', {
+    if (jobTitle) {
+          this.http.post('http://localhost:8000/jobfinder/', {
       jobtrax_user: '1',
       job_title: jobTitle,
       // date_applied: dateApplied,
       // notes: jobDescription,
     }).subscribe(() => {
       this.getAllJobsAppliedTo().subscribe(result => {
-        this.jobsGraphInterfaceService.sampleJobsAppliedTo = result;
-        console.log(result)
+        this.temp = result;
+        this.temp.map((e) => {
+          e.dateApplied = e.date_applied;
+        });
+        this.jobsGraphInterfaceService.sampleJobsAppliedTo = this.temp;
+        this.jobsGraphInterfaceService.organizeJobs();
       });
     });
+    } else {
+      this.getAllJobsAppliedTo().subscribe(result => {
+        this.temp = result;
+        this.temp.map((e) => {
+          e.dateApplied = e.date_applied;
+        });
+        this.jobsGraphInterfaceService.sampleJobsAppliedTo = this.temp;
+        this.jobsGraphInterfaceService.organizeJobs();
+      });
+    }
   }
 
   getAllJobsAppliedTo() {
